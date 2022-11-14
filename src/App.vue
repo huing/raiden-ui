@@ -1,24 +1,72 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div id="app">
-    <header>
-
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
-
-        <nav>
-          <router-link to="/">Home</router-link>
-          <router-link to="/about">About</router-link>
-        </nav>
-      </div>
-    </header>
-
-    <router-view />
+  <div id="layout">
+    <LayoutSider />
+    <LayoutContent />
+    <LayoutPreview />
   </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import LayoutSider from "@/layout/Sider.vue";
+import LayoutContent from "@/layout/Content.vue";
+import LayoutPreview from "@/layout/Preview.vue";
+</script>
+<style lang="less">
+body,
+div {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+}
+
+.layout-sider {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  z-index: 1;
+  overflow-y: scroll;
+  // background-color: #fff;
+  box-shadow: 0 8px 12px #ebedf0;
+  // background: rebeccapurple;
+}
+
+.layout-content {
+  width: 100%;
+  // height: 100vh;
+  box-sizing: border-box;
+  padding: 0 390px 0 220px;
+  overflow: hidden;
+  // background: black;
+}
+
+.layout-preview {
+  position: fixed;
+  top: 30px;
+  bottom: 30px;
+  right: 15px;
+  width: 375px;
+  min-width: 375px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: #ebedf0 0 4px 12px;
+  // background: green;
+}
+
+@media screen and (min-width: 800px) {
+  .layout-sider,
+  .layout-content {
+    display: none;
+  }
+}
 </style>

@@ -7,13 +7,17 @@ const router = new VueRouter({
   mode: "hash",
   base: import.meta.env.BASE_URL,
   routes: [
-    // { path: "*", redirect: "/" },
     { path: "/", redirect: "/button" },
     {
       path: "/button",
       name: "Button",
-      component: () => import("@/components/button/README.md"),
+      component: () => import("@/components/button/demo/index.vue"),
     },
+    // {
+    //   path: "/checkbox",
+    //   name: "Checkbox",
+    //   component: () => import("@/components/checkbox/demo/index.vue"),
+    // },
   ],
 });
 
@@ -22,12 +26,12 @@ export default router;
 // window.VueRouter = router;
 
 // router.beforeEach((to, from, next) => {
-//   console.log("toto", document.getElementById("iframe"));
+//   console.log("to", document.querySelector("iframe"));
 
-//   // window.postMessage({ path: "aaa" }, "*");
+//   window.postMessage({ path: "ccc" }, "*");
 //   document
 //     .querySelector("iframe")
-//     ?.contentWindow?.postMessage({ path: "bbb" }, "*");
+//     ?.contentWindow?.postMessage({ path: "ddd" }, "*");
 
 //   next();
 //   // ...
