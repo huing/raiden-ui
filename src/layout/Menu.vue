@@ -5,36 +5,23 @@
       <span>Raiden-UI</span>
     </div>
     <div v-for="(item, index) in list" :key="index">
-      <!-- <router-link
+      <router-link
         class="doc-cell"
         :to="item.path"
         :class="{ 'is-active': $route.path === item.path }"
       >
         {{ item.name }}
-      </router-link> -->
+      </router-link>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import router from "../router";
+import { routes } from "./router";
 
-const list = router.options.routes?.filter((item) => item.name);
+const list = routes?.filter((item) => item.name);
 
 // console.log("routes", list);
-
-// export default {
-//   name: "LayoutMenu",
-//   data() {
-//     // RouteConfig
-//     return {
-//       list: [],
-//     };
-//   },
-//   created() {
-//     this.list = router.options.routes?.filter((item) => item.name);
-//   },
-// };
 </script>
 <style lang="less">
 .doc-logo {

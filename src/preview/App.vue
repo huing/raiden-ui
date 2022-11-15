@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import router from "@/router";
-
 // console.log(456, window.location, window.VueRouter);
 window.addEventListener("message", (event) => {
   console.log("iframe message", event.data);

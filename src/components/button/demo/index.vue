@@ -2,12 +2,12 @@
   <section class="raiden-demo m20">
     <div class="section-title">按钮类型</div>
     <div class="flex-cont">
-      <RaidenButton type="p" class="btn-color">primary</RaidenButton>
-      <!-- <RaidenButton type="default">default</RaidenButton>
+      <RaidenButton type="primary" class="btn-color">primary</RaidenButton>
+      <RaidenButton type="default">default</RaidenButton>
       <RaidenButton type="plain">plain</RaidenButton>
-      <RaidenButton type="link">link</RaidenButton> -->
+      <RaidenButton type="link">link</RaidenButton>
     </div>
-    <!-- <div class="section-title">按钮大小</div>
+    <div class="section-title">按钮大小</div>
     <div class="flex-cont">
       <RaidenButton size="large">large</RaidenButton>
       <RaidenButton size="normal">normal</RaidenButton>
@@ -47,10 +47,10 @@
         full
         >渐变色背景，要自定义borderColor</RaidenButton
       >
-    </div> -->
+    </div>
   </section>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 // export default {
 //   name: "DemoButton",
 // };

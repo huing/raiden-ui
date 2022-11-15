@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import LayoutSider from "@/layout/Sider.vue";
-import LayoutContent from "@/layout/Content.vue";
-import LayoutPreview from "@/layout/Preview.vue";
+import LayoutSider from "./Sider.vue";
+import LayoutContent from "./Content.vue";
+import LayoutPreview from "./Preview.vue";
 </script>
 <style lang="less">
 body,
@@ -63,7 +63,7 @@ div {
   // background: green;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
   .layout-sider,
   .layout-content {
     display: none;

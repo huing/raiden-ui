@@ -1,6 +1,6 @@
 <template>
   <div class="layout-preview">
-    <iframe id="iframe" ref="iframe" src="/preview/index.html"></iframe>
+    <iframe id="iframe" ref="iframe" src="preview.html"></iframe>
   </div>
 </template>
 

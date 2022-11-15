@@ -1,5 +1,5 @@
 import Vue from "vue";
-import UI from "@/components";
+// import UI from "@/components";
 import Button from "@/components/button/index";
 import App from "./App.vue";
 import router from "./router";

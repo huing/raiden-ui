@@ -9,6 +9,8 @@ import { join, resolve } from "node:path";
 import hljs from "highlight.js";
 import vitePluginMd from "vite-plugin-md";
 
+console.log(1, join(__dirname, "src", "layout", "index.html"));
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -47,7 +49,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
-        preview: join(__dirname, "preview", "index.html"),
+        preview: resolve(__dirname, "preview.html"),
       },
     },
   },

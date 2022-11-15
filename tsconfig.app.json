@@ -4,9 +4,9 @@
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "allowJs": true,
+    // "preserveValueImports": false,
     "isolatedModules": true,
     "composite": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
